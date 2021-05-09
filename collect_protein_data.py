@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-MADIP: Molecular Atlas Data Integration Pipeline
+This file is part of MADIP: Molecular Atlas Data Integration Pipeline
 
 This module loads the data for step_1_collect_protein_data.ipynb jupyter notebook.
 Age in days is only approximate and not involved in the downstream analysis. Qualitative age category is defined based on the original data sources.

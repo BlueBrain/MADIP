@@ -1,7 +1,7 @@
 #Blue Brain Project, EPFL
 
 """
-MADIP: Molecular Atlas Data Integration Pipeline
+This file is part of MADIP: Molecular Atlas Data Integration Pipeline
 
 Copyright 2021 Blue Brain Project / EPFL 
 

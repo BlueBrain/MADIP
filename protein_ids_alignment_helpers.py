@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-MADIP: Molecular Atlas Data Integration Pipeline
+This file is part of MADIP: Molecular Atlas Data Integration Pipeline
 
 This module provide helper functions for step_2_protein_ids_alignment.ipynb jupyter notebook
 
@@ -81,7 +81,7 @@ def process_uniprot_mapping_data():
 
 
 
-def get_gene_unified(index, row):
+def get_gene_unified(index, row, gn_study_dict):
     """
     Count number of gene name occurences, return candidate unified gene names
     """
@@ -106,7 +106,7 @@ def get_gene_unified(index, row):
         return gn_list[0]
     
     
-def get_uniprot_unified(index, row):
+def get_uniprot_unified(index, row, uniprot_study_dict):
     """
     Count number of UniProt id occurences, return candidate unified UniProt ids
     """
