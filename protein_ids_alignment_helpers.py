@@ -26,6 +26,8 @@ Copyright 2021 Blue Brain Project / EPFL
 import pandas as pd
 import numpy as np
 
+from itertools import chain
+
 import re
 
 import pickle as pkl
@@ -156,7 +158,7 @@ def check_GN_consistency_within_studies(df_all):
 any_in = lambda a, b: any(i in b for i in a)
 
 
-def get_uniprot_raw_data(index,row,uniprots_list,uniprot_rev_values_for_uniprots_list,uniprot_unrev_values_for_uniprots_list,uniprot_ids_mrh_dict_values_for_uniprots_list):
+def get_uniprot_raw_data(index,row,uniprots_list,uniprot_rev_values_for_uniprots_list,uniprot_unrev_values_for_uniprots_list,uniprot_ids_mrh_dict_values_for_uniprots_list,gn_study_count_dict):
     """
     Count occurences of ids to find the most frequent, consider id type and reliability (reviewed/unreviewed)
     """
@@ -250,7 +252,7 @@ def get_uniprot_raw_data(index,row,uniprots_list,uniprot_rev_values_for_uniprots
     
     
     
-def get_gene_id_final(index,row):
+def get_gene_id_final(index,row,uniprot_rev_dict,uniprot_unrev_dict,uniprot_ids_mrh_dict,gn_study_count_dict):
     """
     Count occurences of ids to find the most frequent, consider id type and reliability (reviewed/unreviewed). Perform the main part of the ids alignment
     """
@@ -290,7 +292,7 @@ def get_gene_id_final(index,row):
             uniprot_ids_mrh_dict_values_for_uniprots_list1 = [x for x in uniprot_ids_mrh_dict_values_for_uniprots_list0 if x is not None]
             uniprot_ids_mrh_dict_values_for_uniprots_list = list(chain.from_iterable(uniprot_ids_mrh_dict_values_for_uniprots_list1))
 
-            return get_uniprot_raw_data(index,row,uniprots_list,uniprot_rev_values_for_uniprots_list,uniprot_unrev_values_for_uniprots_list,uniprot_ids_mrh_dict_values_for_uniprots_list)
+            return get_uniprot_raw_data(index,row,uniprots_list,uniprot_rev_values_for_uniprots_list,uniprot_unrev_values_for_uniprots_list,uniprot_ids_mrh_dict_values_for_uniprots_list,gn_study_count_dict)
         
         
         else:
