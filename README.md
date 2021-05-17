@@ -1,6 +1,7 @@
 # MADIP
 MADIP: Molecular Atlas Data Integration Pipeline
-This is the code to use the data intergation and processing pipeline from the manuscript: A Standardized Brain Molecular Atlas: a resource for systems modeling and simulation (under review in Frontiers in Molecular Neuroscience)
+
+This is the code to use the data integration and processing pipeline from the manuscript: A Standardized Brain Molecular Atlas: a resource for systems modeling and simulation (under review in Frontiers in Molecular Neuroscience)
 The figures reproducing code is available from the accompanying repository https://github.com/BlueBrain/BrainMolecularAtlas 
 
 ## Getting Started
